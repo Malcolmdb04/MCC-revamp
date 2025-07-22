@@ -1,10 +1,15 @@
-/* Sticky nav */
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
+/* Sticky header container */
 header {
   position: sticky;
   top: 0;
   z-index: 10000;
 }
 
+/* Main navigation bar */
 nav {
   position: sticky;
   top: 0;
@@ -19,7 +24,11 @@ nav {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo container */
+/* ===================================
+   LOGO SECTION
+   =================================== */
+
+/* Logo container layout */
 .logo-container {
   display: flex;
   align-items: center;
@@ -27,12 +36,7 @@ nav {
   flex: 1;
 }
 
-#logo-img {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-}
-
+/* Logo text styling */
 #logo-header {
   font-size: 1.6rem;
   font-weight: 600;
@@ -44,7 +48,11 @@ nav {
   text-decoration: none;
 }
 
-/* Burger button */
+/* ===================================
+   NAVIGATION MENU
+   =================================== */
+
+/* Mobile burger menu button */
 #burger-toggle {
   display: none;
   font-size: 24px;
@@ -55,7 +63,7 @@ nav {
   margin-left: auto;
 }
 
-/* Nav list */
+/* Navigation list container */
 .nav-list {
   list-style: none;
   display: flex;
@@ -65,6 +73,7 @@ nav {
   gap: 5px;
 }
 
+/* Navigation links and buttons */
 .nav-list li a,
 .nav-list li button {
   color: white;
@@ -78,6 +87,15 @@ nav {
   transition: background 0.25s ease;
 }
 
+.nav-list li a:hover,
+.nav-list li button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ===================================
+   CONTACT BUTTON
+   =================================== */
+
 #contact-button {
   background-color: #656876;
   color: white;
@@ -89,24 +107,23 @@ nav {
 }
 
 #contact-button:hover {
-  background-color: #4a4e57; /* a darker shade */
+  background-color: #4a4e57;
   transform: scale(1.05);
 }
 
-.nav-list li a:hover,
-.nav-list li button:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE
+   =================================== */
 
-
-
-/* Mobile styles */
+/* Mobile navigation (750px and below) */
 @media (max-width: 750px) {
+  /* Navigation container adjustments */
   nav {
     padding-left: 0;
     padding-right: 0;
   }
 
+  /* Logo container mobile layout */
   .logo-container {
     padding-left: 24px;
     padding-right: 24px;
@@ -114,10 +131,12 @@ nav {
     width: 100%;
   }
 
+  /* Show burger menu button */
   #burger-toggle {
     display: block;
   }
 
+  /* Mobile navigation menu */
   .nav-list {
     display: none;
     flex-direction: column;
@@ -126,15 +145,17 @@ nav {
     background-color: rgb(24, 26, 27);
     border-radius: 0 0 6px 6px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* subtle depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
+  /* Open state for mobile menu */
   .nav-list.open {
     display: flex;
     animation: fadeInDown 0.3s ease forwards;
-    background-color: rgb(34, 36, 38); /* Slightly lighter/darker */
+    background-color: rgb(34, 36, 38);
   }
 
+  /* Mobile menu items */
   .nav-list li {
     width: 100%;
     border-bottom: none;
@@ -146,11 +167,12 @@ nav {
     display: block;
   }
 
+  /* Mobile menu links and buttons */
   .nav-list li a,
   .nav-list li button {
     width: 100%;
-    text-align: center;         /* Center text for balance */
-    padding: 14px 0;            /* Vertical padding */
+    text-align: center;
+    padding: 14px 0;
     font-size: 1.15rem;
     font-weight: 600;
     border-radius: 0;

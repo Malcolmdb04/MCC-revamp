@@ -1,8 +1,14 @@
+/* ===================================
+   GLOBAL STYLES & RESET
+   =================================== */
+
+/* Universal box-sizing and font family */
 * {
   font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* Body styling */
 body {
   background-color: white;
 }

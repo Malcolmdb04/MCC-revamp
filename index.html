@@ -7,9 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/index.css">
   <script defer src="assets/js/nav.js"></script>
   <script src="assets/js/slideshow.js"></script>
   <title>MCC Limpopo - Home</title>
@@ -19,7 +19,6 @@
   <header>
   <nav>
     <div class="logo-container">
-      <img id="logo-img" src="assets/images/logo.png" alt="Company Logo">
       <h1 id="logo-header"><a href="index.html">MCC Limpopo</a></h1>
 
       <button id="burger-toggle" aria-label="Toggle navigation">
@@ -37,23 +36,35 @@
 
 
   <main>
-    <section id="intro-banner">
+   <section id="intro-banner">
+  <div class="intro-content">
+        <div class="intro-image-container">
+      <img src="assets/images/logo.png" alt="MCC Logo">
+    </div>
+    <div class="intro-text-content">
+      <h2>Your Partner in Quality Construction Products</h2>
+      <p>
+        MCC Limpopo, manufacturers a large range of products for the Civil, <br>
+        Building and Mining Industry, as well as a full range of Tiling Products.
+      </p>
+      <button class="green-button">Learn More</button>
+    </div>
 
-        <h2 class="intro-text">Your Partner in Quality Construction Products</h2>
-        <p class="intro-text">
-          MCC Limpopo, manufacturers a large range of products for the Civil, <br> Building and Mining Industry, as well as a full range of Tiling Products.
-        </p>
+  </div>
+</section>
 
-        <button class="green-button">Learn More</button>
-
-    </section>
 
     <section id="our-work-section">
       <h2 class="label">
         Our Work
       </h2>
 
-      <div class="slideshow-container">
+
+
+      <div style="padding: 0 1.2em;">
+
+
+  <div class="slideshow-container">
 
     <div class="mySlides fade">
       <img src="assets/images/slides/Before/1.JPG" alt="Before">
@@ -85,7 +96,18 @@
       <div class="text">After</div>
     </div>
 
+
+  <!-- Navigation Buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
   </div>
+
+      </div>
+
+
+
+     
 
   <div class="dot-container">
     <span class="dot" onclick="currentSlide(1)"></span>
@@ -180,70 +202,66 @@
 
 
 
+
+
+
 <footer id="footer-section">
   <div class="footer-content">
 
-    <!-- Contact Form -->
-    <form id="contact-form" class="contact-form" method="POST">
+    <!-- Contact Us -->
+    <div class="footer-column">
       <h3 class="footer-heading">Contact Us</h3>
-
-      <input type="text" name="name" id="name" placeholder="Name" required>
-      <input type="email" name="email" id="email" placeholder="Email" required>
-      <input type="text" name="subject" id="subject" placeholder="Subject">
-      <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-
-      <button type="submit" class="submit-button">Send Message</button>
-    </form>
-
-    <!-- Contact Details -->
-    <div class="contact-details">
-      <h3 class="footer-heading">Contact Details</h3>
       <ul class="contact-list">
         <li>
-          <i class="ri-home-4-line"></i>
-          <a href="https://maps.app.goo.gl/vS8mFuTuP7ty6r3r7">24, 20th Street, Industrial, Polokwane, Limpopo, South Africa</a>
-        </li>
-
-        <li>
-          <i class="ri-mail-send-line"></i>
-          <span>Postnet Suite 33, Polokwane, 0700, South Africa</span>
-        </li>
-
-        <li>
           <i class="ri-phone-line"></i>
-          <span>TEL: 015 023 1109</span>
+          <span><strong>Phone:</strong> 015 023 1109</span>
         </li>
-
         <li>
           <i class="ri-user-3-line"></i>
           <span>
-            Justin du Bruyn: 082 895 1065<br>
-            Edward Chigudu: 083 479 6081<br>
-            Patrick Masekela: 061 458 9319
+            <strong>Justin du Bruyn:</strong> 082 895 1065<br>
+            <strong>Edward Chigudu:</strong> 083 479 6081<br>
+            <strong>Patrick Masekela:</strong> 061 458 9319
           </span>
         </li>
-
         <li>
           <i class="ri-mail-line"></i>
           <span>
+            <strong>Email:</strong><br>
             <a href="mailto:justin22.jdb@gmail.com">justin22.jdb@gmail.com</a><br>
             <a href="mailto:edward@mcclimpopo.co.za">edward@mcclimpopo.co.za</a><br>
             <a href="mailto:patrick@mcclimpopo.co.za">patrick@mcclimpopo.co.za</a>
           </span>
         </li>
-
         <li>
           <i class="ri-facebook-fill"></i>
-          <a href="https://www.facebook.com/mcclimpopo">@MCC Limpopo</a>
+          <span><strong>Facebook:</strong> <a href="https://www.facebook.com/mcclimpopo">@MCC Limpopo</a></span>
         </li>
       </ul>
     </div>
+
+    <!-- Visit Us -->
+    <div class="footer-column">
+      <h3 class="footer-heading">Visit Us</h3>
+      <ul class="contact-list">
+        <li>
+          <i class="ri-home-4-line"></i>
+          <span><strong>Address:</strong> <a href="https://maps.app.goo.gl/vS8mFuTuP7ty6r3r7">24, 20th Street, Industrial, Polokwane, Limpopo, South Africa</a></span>
+        </li>
+        <li>
+          <i class="ri-mail-send-line"></i>
+          <span><strong>Postal:</strong> Postnet Suite 33, Polokwane, 0700, South Africa</span>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
   <div class="footer-bottom">
     <p>&copy; MCC Limpopo</p>
   </div>
 </footer>
+
 
 
 

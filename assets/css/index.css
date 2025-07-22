@@ -1,3 +1,16 @@
+/* ===================================
+   HEADER STYLES
+   =================================== */
+
+#logo-header a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ===================================
+   INTRO BANNER SECTION
+   =================================== */
+
 #intro-banner {
   display: flex;
   flex-direction: column;
@@ -6,28 +19,49 @@
   text-align: center;
   padding: 40px 24px;
   color: #3d424f;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
-.intro-text {
-  max-width: 720px;
-  width: 100%;
-  margin-bottom: 20px;
+/* New intro section layout with side-by-side content */
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#intro-banner h2 {
+.intro-text-content {
+  flex: 1 1 400px;
+}
+
+.intro-text-content h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
-#intro-banner p {
+.intro-text-content p {
   font-size: 1.2rem;
-  line-height: 1.65;
-  margin: 0;
-  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
+.intro-image-container {
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 250px;
+}
+
+/* Green action button */
 .green-button {
   font-size: 1.2rem;
   margin-top: 28px;
@@ -46,7 +80,10 @@
   transform: translateY(-1px);
 }
 
-/* Section label */
+/* ===================================
+   SECTION LABELS
+   =================================== */
+
 .label {
   text-align: center;
   background-color: #4fcd8e;
@@ -57,6 +94,10 @@
   letter-spacing: 0.5px;
 }
 
+/* ===================================
+   SLIDESHOW COMPONENT
+   =================================== */
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -64,8 +105,8 @@
   margin: 32px auto;
   overflow: hidden;
   border-radius: 8px;
-  background-color: #f4f4f4;
-  min-height: 400px; /* reduced for mobile */
+  background-color: white;
+  min-height: 400px;
   height: auto;
 }
 
@@ -86,15 +127,13 @@
   position: relative;
 }
 
-/* Slide image */
+/* Slide images */
 .mySlides img {
   width: 100%;
   max-height: 550px;
   object-fit: cover;
-  border-radius: 8px;
-  padding: 0 4em;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 /* Slide caption text */
@@ -114,7 +153,37 @@
   text-align: center;
 }
 
-/* Dots */
+/* Navigation arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 4px;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dot navigation */
 .dot-container {
   text-align: center;
   margin-top: 16px;
@@ -136,13 +205,135 @@
   background-color: #00b47b;
 }
 
-/* === Responsive Breakpoints === */
+/* ===================================
+   COLLAGE GRID SECTION
+   =================================== */
 
-/* Tablets & smaller desktops */
+.collage-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 32px 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collage-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   ABOUT SECTION
+   =================================== */
+
+#about-section {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  padding: 0 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   PRODUCTS SECTION
+   =================================== */
+
+#products-section {
+  margin: 32px auto;
+  background-color: f4f4f4;
+}
+
+/* Product images grid */
+.products-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 0 30px;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Products categories list */
+.products-categories-list {
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e2e2;
+  color: #4b505c;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.category-item:hover {
+  background-color: #3bb26a;
+  color: white;
+}
+
+/* Button container */
+.actions.special {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===================================
+   MANUALS SECTION
+   =================================== */
+
+.manuals-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.manuals-a {
+  display: inline-block;
+  margin: 20px auto 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablets & smaller desktops (992px and below) */
 @media (max-width: 992px) {
-    
   .mySlides img {
-    padding: 0 2em;
     max-height: 480px;
   }
 
@@ -150,15 +341,51 @@
     font-size: 1.1rem;
     padding: 8px 16px;
   }
+
+  .products-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .products-categories-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
 }
 
-/* Mobile devices */
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .intro-image-container {
+    margin-bottom: 20px;
+  }
+
+  .intro-text-content h2 {
+    font-size: 2rem;
+  }
+
+  #logo-header a {
+    font-size: 1.6rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile devices (600px and below) */
 @media (max-width: 600px) {
-    .slideshow-container {
-        min-height: 0;
-    }
+  .slideshow-container {
+    min-height: 0;
+  }
+
   .mySlides img {
-    padding: 0 1em;
     max-height: 360px;
   }
 
@@ -177,153 +404,13 @@
     width: 10px;
     margin: 0 3px;
   }
-}
 
-/* Large desktops */
-@media (min-width: 1200px) {
-  .mySlides img {
-    padding: 0;
-    border-radius: 8px;
-  }
-}
-
-
-
-
-/* Collage Grid Container */
-.collage-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 32px 20px;
-
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* Collage Images */
-.collage-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.collage-image:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-
-/* About Section */
-#about-section {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
-/* Paragraph Container */
-.about-content {
-  display: flex;
-  flex-direction: column;
-  color: #444;
-  font-size: 1.125rem;
-  line-height: 1.75;
-  padding: 0 50px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Responsive Text Adjustments */
-@media (max-width: 768px) {
-  .about-content {
-    font-size: 1rem;
-    line-height: 1.65;
-    padding: 0 20px;
-  }
-}
-
-
-
-
-
-
-
-/* Container styling */
-#products-section {
-  margin: 32px auto;
-  background-color: f4f4f4;
-}
-
-/* Product Images Grid */
-.products-images-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 32px;
-  paddinG: 0 30px;
-}
-
-.product-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Products Categories List */
-.products-categories-list {
-    padding: 0 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
-.category-item {
-  display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center; 
-  background-color: #f4f4f4;;
-  color: #4b505c;
-  padding: 12px 16px;
-  border-radius: 6px;
-  cursor: default;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  font-size: x-large;
-  font-weight: 500;
-}
-
-
-.category-item:hover {
-  background-color: #3bb26a;
-  color: white;
-}
-
-/* Button container */
-.actions.special {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .products-images-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .prev, .next {
+    font-size: 20px;
+    padding: 10px;
+    top: 45%;
   }
 
-  .products-categories-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-}
-
-@media (max-width: 600px) {
   .products-images-grid {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -338,17 +425,4 @@
     font-size: 0.9rem;
     padding: 10px 12px;
   }
-}
-
-
-.manuals-a {
-  display: inline-block;
-  margin: 20px auto 0;
-  text-decoration: none;
-  text-align: center;
-}
-
-.manuals-wrapper {
-  display: flex;
-  justify-content: center;
 }

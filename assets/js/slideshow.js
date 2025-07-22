@@ -3,6 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".mySlides");
   const dots = document.querySelectorAll(".dot");
 
+
+  window.plusSlides = function(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (slideIndex < 1) slideIndex = slides.length;
+
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
+}
+
+
+
   function showSlides() {
     slides.forEach(slide => slide.classList.remove("active"));
     dots.forEach(dot => dot.classList.remove("active"));
@@ -15,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slides[slideIndex - 1].classList.add("active");
     dots[slideIndex - 1].classList.add("active");
 
-    setTimeout(showSlides, 4000); // Change image every 4 seconds
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
   }
 
   function currentSlide(n) {

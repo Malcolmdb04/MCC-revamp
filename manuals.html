@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ===================================
+     HEAD SECTION - Meta, Links & Scripts
+     =================================== -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCC Limpopo - Product Manuals</title>
+  
+  <!-- External Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/manuals.css">
+  
+  <!-- JavaScript Files -->
+  <script defer src="assets/js/nav.js"></script>
+  <script defer src="assets/js/manuals.js"></script>
+  <script defer src="assets/js/contact.js"></script>
+</head>
+
+<body>
+
+  <!-- ===================================
+       HEADER & NAVIGATION
+       =================================== -->
+  <header>
+    <nav>
+      <!-- Logo and burger menu container -->
+      <div class="logo-container">
+        <h1 id="logo-header">
+          <a href="index.html">MCC Limpopo</a>
+        </h1>
+        <button id="burger-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <!-- Navigation menu -->
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="manuals.html">Product Manuals</a></li>
+        <li><button id="contact-button">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================================
+       MAIN CONTENT
+       =================================== -->
+  <main>
+
+<!-- ===================================
+    PAGE TITLE SECTION
+=================================== -->
+<section id="page-title-section">
+<div class="page-title-content intro-content">
+    
+    <!-- Image container -->
+    <div class="intro-image-container">
+    <img src="assets/images/logo.png" alt="MCC Logo">
+    </div>
+    
+    <!-- Title and description -->
+    <div class="intro-text-content">
+    <h1>Product Manuals</h1>
+    <p>
+        Download technical manuals and documentation for all MCC Limpopo products
+    </p>
+    </div>
+
+</div>
+</section>
+
+
+    <!-- ===================================
+         MANUALS SECTION
+         =================================== -->
+    <section id="manuals-section">
+      <!-- Dynamic dropdown containers will be inserted here by JavaScript -->
+      <div class="dropdown-container">
+        <!-- Loading message while data is being fetched -->
+        <div class="loading-message">
+          <p>Loading product manuals...</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================
+       FOOTER SECTION
+       =================================== -->
+  <footer id="footer-section">
+    <div class="footer-content">
+
+      <!-- Contact information column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Contact Us</h3>
+        <ul class="contact-list">
+          <li>
+            <i class="ri-phone-line"></i>
+            <span><strong>Phone:</strong> 015 023 1109</span>
+          </li>
+          <li>
+            <i class="ri-user-3-line"></i>
+            <span>
+              <strong>Justin du Bruyn:</strong> 082 895 1065<br>
+              <strong>Edward Chigudu:</strong> 083 479 6081<br>
+              <strong>Patrick Masekela:</strong> 061 458 9319
+            </span>
+          </li>
+          <li>
+            <i class="ri-mail-line"></i>
+            <span>
+              <strong>Email:</strong><br>
+              <a href="mailto:justin22.jdb@gmail.com">justin22.jdb@gmail.com</a><br>
+              <a href="mailto:edward@mcclimpopo.co.za">edward@mcclimpopo.co.za</a><br>
+              <a href="mailto:patrick@mcclimpopo.co.za">patrick@mcclimpopo.co.za</a>
+            </span>
+          </li>
+          <li>
+            <i class="ri-facebook-fill"></i>
+            <span><strong>Facebook:</strong> <a href="https://www.facebook.com/mcclimpopo">@MCC Limpopo</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Location and address column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Visit Us</h3>
+        <ul class="contact-list">
+          <li>
+            <i class="ri-home-4-line"></i>
+            <span><strong>Address:</strong> <a href="https://maps.app.goo.gl/vS8mFuTuP7ty6r3r7">24, 20th Street, Industrial, Polokwane, Limpopo, South Africa</a></span>
+          </li>
+          <li>
+            <i class="ri-mail-send-line"></i>
+            <span><strong>Postal:</strong> Postnet Suite 33, Polokwane, 0700, South Africa</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer copyright -->
+    <div class="footer-bottom">
+      <p>&copy; MCC Limpopo</p>
+    </div>
+  </footer>
+
+</body>
+</html>

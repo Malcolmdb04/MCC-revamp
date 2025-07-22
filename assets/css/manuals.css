@@ -1,0 +1,188 @@
+/* ===========================
+   PAGE TITLE SECTION
+   =========================== */
+#page-title-section {
+  background-color: white;
+  padding: 4em 1.5em 2.5em;
+  text-align: center;
+}
+
+.page-title-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.page-title-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #1a1a1a;
+}
+
+.page-title-content p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-text-content > p:nth-child(2) {
+    margin: 0;
+}
+/* ===========================
+   MANUALS SECTION
+   =========================== */
+#manuals-section {
+  padding: 2em 1.5em;
+  background-color: #ffffff;
+}
+
+/* ===========================
+   DROPDOWN STRUCTURE
+   =========================== */
+.dropdown {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 80%;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.dropdown-header {
+  background-color: #e6f0ea;
+  padding: 1em 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-header:hover {
+  background-color: #d4e6db;
+}
+
+.dropdown-header p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a3c2d;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.active-header {
+  background-color: #cce2d3;
+}
+
+
+/* ===========================
+   DROPDOWN TABLE
+   =========================== */
+.dropdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fafafa;
+}
+
+.dropdown-table th,
+.dropdown-table td {
+  text-align: left;
+  padding: 0.75em 1.2em;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.table-header th {
+  background-color: #eef5f0;
+  font-weight: 600;
+}
+
+.file-name-cell {
+  color: #333;
+}
+
+.download-cell {
+  text-align: right;
+}
+
+.download-btn {
+  padding: 0.5em 1em;
+  background-color: #1a3c2d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #145c3d;
+}
+
+
+/* ===========================
+   LOADING / ERROR MESSAGES
+   =========================== */
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  padding: 2em 1em;
+}
+
+.no-data-cell {
+  padding: 1.5em;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 600px) {
+    #page-title-section {
+        padding-bottom: 0;
+    }
+
+    .intro-text-content {
+        flex: 0;
+        text-align: center;
+    }
+    .dropdown {
+        width: 95%;
+    }
+
+  .dropdown-header {
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  .download-cell {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .download-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

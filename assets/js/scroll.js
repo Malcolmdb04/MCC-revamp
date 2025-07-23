@@ -1,6 +1,6 @@
-// Wait for the DOM to be fully loaded before initializing scroll functionality
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Get references to the learn more button and target section
+
     const learnMoreBtn = document.querySelector(".green-button");
     const aboutSection = document.querySelector("#about-section");
     
@@ -12,10 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /**
+    /*
      * Custom smooth scroll function with easing animation
-     * @param {number} targetY - The Y position to scroll to
-     * @param {number} duration - Animation duration in milliseconds
      */
     function smoothScrollTo(targetY, duration) {
         // Get current scroll position
@@ -27,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Initialize timing variable
         let startTime = null;
 
-        /**
+        /*
          * Animation frame function that handles the scroll progression
-         * @param {number} currentTime - Current timestamp from requestAnimationFrame
          */
         function animation(currentTime) {
             // Set start time on first frame
@@ -51,11 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        /**
+        /*
          * Quadratic easing function for smooth in-out animation
-         * Creates acceleration at start and deceleration at end
-         * @param {number} t - Progress value between 0 and 1
-         * @returns {number} Eased progress value
          */
         function easeInOutQuad(t) {
             return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;

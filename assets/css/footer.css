@@ -91,7 +91,7 @@
    RESPONSIVE DESIGN
    =================================== */
 
-/* Tablets and mobile devices (840px and below) */
+/* Tablets and mobile devices */
 @media (max-width: 840px) {
   .footer-content {
     flex-direction: column;

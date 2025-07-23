@@ -1,19 +1,14 @@
-/* ===================================
-   GLOBAL VARIABLES & INITIALIZATION
-   =================================== */
-
-// Wait for the DOM to be fully loaded before initializing
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Configuration
+
   const jsonFilePath = './data/manuals.json';
 
-  // State management variables
   let data = {};
   let openTable = null;
   let openHeader = null;
   let openArrow = null;
 
-  // Get main container element
+
   const dropdownContainer = document.querySelector(".dropdown-container");
 
   // Validate that required DOM elements exist
@@ -22,14 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Initialize the manuals system
+
   initializeManuals();
 
-  /* ===================================
-     INITIALIZATION & DATA LOADING
-     =================================== */
 
-  /**
+  /*
    * Initialize the manuals page by fetching data and creating the interface
    */
   function initializeManuals() {
@@ -58,11 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  /* ===================================
-     DROPDOWN CREATION & MANAGEMENT
-     =================================== */
 
-  /**
+  /*
    * Create dropdown sections for each category in the data
    */
   function createDropdownSections() {
@@ -81,16 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // Add toggle functionality
       addDropdownToggleListener(dropdownHeader, table, category);
 
-      // Add to container
       dropdownContainer.appendChild(dropdown);
     });
   }
 
-  /**
-   * Create the header element for a dropdown section
-   * @param {string} category - The category name to display
-   * @returns {HTMLElement} The created header element
-   */
+
+
   function createDropdownHeader(category) {
     const dropdownHeader = document.createElement("div");
     dropdownHeader.classList.add("dropdown-header");
@@ -112,10 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return dropdownHeader;
   }
 
-  /**
-   * Create the table element for displaying manual files
-   * @returns {HTMLElement} The created table element
-   */
+
   function createDropdownTable() {
     const table = document.createElement("table");
     table.classList.add("dropdown-table");
@@ -123,16 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return table;
   }
 
-  /* ===================================
-     EVENT HANDLING & INTERACTIONS
-     =================================== */
 
-  /**
-   * Add click event listener to dropdown header for toggle functionality
-   * @param {HTMLElement} header - The header element
-   * @param {HTMLElement} table - The table element to show/hide
-   * @param {string} category - The category name
-   */
+
   function addDropdownToggleListener(header, table, category) {
     const arrowImg = header.querySelector('.dropdown-arrow');
 
@@ -154,11 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ===================================
-     DROPDOWN STATE MANAGEMENT
-     =================================== */
 
-  /**
+  /*
    * Close the currently open dropdown if one exists
    */
   function closeOpenDropdown() {
@@ -167,11 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  /**
+  /*
    * Set the active dropdown and update global state variables
-   * @param {HTMLElement} header - The header element
-   * @param {HTMLElement} table - The table element
-   * @param {HTMLElement} arrow - The arrow element
    */
   function setActiveDropdown(header, table, arrow) {
     openTable = table;
@@ -183,11 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
     arrow.classList.add("rotate");
   }
 
-  /**
+  /*
    * Close a specific dropdown and update state
-   * @param {HTMLElement} table - The table to close
-   * @param {HTMLElement} header - The header element
-   * @param {HTMLElement} arrow - The arrow element
    */
   function closeDropdown(table, header, arrow) {
     table.style.display = "none";
@@ -202,10 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  /**
+  /*
    * Open a dropdown and populate it with data
-   * @param {HTMLElement} table - The table element to populate
-   * @param {string} category - The category name
    */
   function openDropdown(table, category) {
     // Clear existing content
@@ -230,13 +193,9 @@ document.addEventListener("DOMContentLoaded", function () {
     table.style.display = "table";
   }
 
-  /* ===================================
-     TABLE CONTENT CREATION
-     =================================== */
 
-  /**
+  /*
    * Display a message when no files are available for a category
-   * @param {HTMLElement} table - The table element
    */
   function displayNoFilesMessage(table) {
     const noDataRow = document.createElement("tr");
@@ -248,9 +207,8 @@ document.addEventListener("DOMContentLoaded", function () {
     table.appendChild(noDataRow);
   }
 
-  /**
+  /*
    * Create the table header with column titles
-   * @param {HTMLElement} table - The table element
    */
   function createTableHeader(table) {
     const headerRow = document.createElement("tr");
@@ -270,10 +228,8 @@ document.addEventListener("DOMContentLoaded", function () {
     table.appendChild(headerRow);
   }
 
-  /**
+  /*
    * Create a table row for a manual file
-   * @param {HTMLElement} table - The table element
-   * @param {string} filename - The filename of the manual
    */
   function createFileRow(table, filename) {
     const row = document.createElement("tr");
@@ -295,14 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
     table.appendChild(row);
   }
 
-  /* ===================================
-     DOWNLOAD FUNCTIONALITY
-     =================================== */
 
-  /**
+  /*
    * Create a download button for a manual file
-   * @param {string} filename - The filename of the manual
-   * @returns {HTMLElement} The created download button
    */
   function createDownloadButton(filename) {
     const downloadButton = document.createElement("a");
@@ -312,22 +263,12 @@ document.addEventListener("DOMContentLoaded", function () {
     downloadButton.classList.add("download-btn");
     downloadButton.title = `Download ${filename}`;
 
-    // Add click event for tracking/logging
-    downloadButton.addEventListener("click", function () {
-      console.log(`Downloaded: ${filename}`);
-      // Add analytics or tracking code here if needed
-    });
-
     return downloadButton;
   }
 
-  /* ===================================
-     ERROR HANDLING
-     =================================== */
 
-  /**
+  /*
    * Display an error message to the user
-   * @param {string} message - The error message to display
    */
   function showErrorMessage(message) {
     dropdownContainer.innerHTML = `

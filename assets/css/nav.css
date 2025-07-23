@@ -52,7 +52,7 @@ nav {
    NAVIGATION MENU
    =================================== */
 
-/* Mobile burger menu button */
+/* Mobile burger menu */
 #burger-toggle {
   display: none;
   font-size: 24px;
@@ -73,7 +73,7 @@ nav {
   gap: 5px;
 }
 
-/* Navigation links and buttons */
+/* Navigation links */
 .nav-list li a,
 .nav-list li button {
   color: white;
@@ -112,10 +112,10 @@ nav {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - MOBILE
+   RESPONSIVE DESIGN
    =================================== */
 
-/* Mobile navigation (750px and below) */
+/* Mobile navigation */
 @media (max-width: 750px) {
   /* Navigation container adjustments */
   nav {

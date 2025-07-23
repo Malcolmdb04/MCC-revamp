@@ -35,6 +35,7 @@
 .intro-text-content > p:nth-child(2) {
     margin: 0;
 }
+
 /* ===========================
    MANUALS SECTION
    =========================== */
@@ -90,7 +91,6 @@
   background-color: #cce2d3;
 }
 
-
 /* ===========================
    DROPDOWN TABLE
    =========================== */
@@ -135,9 +135,8 @@
   background-color: #145c3d;
 }
 
-
 /* ===========================
-   LOADING / ERROR MESSAGES
+   LOADING MESSAGES
    =========================== */
 .loading-message,
 .error-message {

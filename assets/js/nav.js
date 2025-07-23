@@ -3,7 +3,7 @@ const burgerToggle = document.getElementById('burger-toggle');
 const navList = document.getElementById('nav-list');
 const nav = document.querySelector('nav');
 
-// Add click event listener to the burger menu button
+// Add click event listener to the burger menu
 burgerToggle.addEventListener('click', function() {
     // Toggle the 'open' class on the navigation list
     navList.classList.toggle('open');

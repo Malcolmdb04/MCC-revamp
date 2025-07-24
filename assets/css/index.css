@@ -283,11 +283,6 @@
   font-weight: 500;
 }
 
-.category-item:hover {
-  background-color: #3bb26a;
-  color: white;
-}
-
 /* Button container */
 .actions.special {
   text-align: center;
